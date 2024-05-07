@@ -16,10 +16,10 @@ function GoalInput({onAddGoal}){
     }
 
     return(
-        <View style={StyleSheet.inputContainer}>
+        <View style={styles.inputContainer}>
 
             <TextInput
-                style={StyleSheet.textInput}
+                style={styles.textInput}
                 placeholder="Your Goal!"
                 onChangeText={handleInputGoal}
                 value={enteredGoalText}
@@ -34,3 +34,24 @@ function GoalInput({onAddGoal}){
 }
 
 export default GoalInput
+
+
+const styles = StyleSheet.create({
+    inputContainer: {
+        flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        marginBottom: 20,
+        borderBottomWidth: 1,
+        borderBottomColor: '#7BC9FF'
+    },
+    textInput: {
+        borderWidth: 1,
+        borderColor: '#ccc',
+        width: '80%',
+        marginRight: 3,
+        padding: 8,
+        borderRadius: 5
+    }
+})
